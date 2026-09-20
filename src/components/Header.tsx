@@ -49,7 +49,7 @@ export default function Header() {
               key={item.label}
               href={item.href}
               onClick={(e) => scrollOrNavigate(e, item.href)}
-              className="whitespace-nowrap font-sans text-[11px] tracking-wide text-charcoal hover:underline underline-offset-4 sm:text-xs"
+              className="whitespace-nowrap font-sans text-[11px] tracking-wide text-muted transition-colors hover:text-charcoal hover:underline underline-offset-4 sm:text-xs"
             >
               {item.label}
             </Link>
@@ -58,16 +58,16 @@ export default function Header() {
 
         <Link
           href="/"
-          className="justify-self-center whitespace-nowrap px-1 font-serif text-lg tracking-tight text-charcoal sm:px-2 sm:text-xl md:text-2xl"
+          className="justify-self-center whitespace-nowrap px-1 font-serif text-xl font-medium italic leading-none tracking-tight text-charcoal sm:px-2 sm:text-2xl md:text-[1.85rem]"
         >
-          dee cast
+          dee <span className="text-pink">cast</span>
         </Link>
 
         <div className="flex min-w-0 items-center justify-end">
           <button
             type="button"
             onClick={openCart}
-            className="inline-flex items-center gap-1.5 whitespace-nowrap font-sans text-[11px] tracking-wide text-charcoal hover:opacity-70 sm:gap-2 sm:text-xs"
+            className="inline-flex items-center gap-1.5 whitespace-nowrap font-sans text-[11px] tracking-wide text-muted transition-colors hover:text-charcoal sm:gap-2 sm:text-xs"
             aria-label="Open cart"
           >
             <svg

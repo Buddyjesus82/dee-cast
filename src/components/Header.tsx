@@ -38,15 +38,18 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-black/5">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
-        <nav className="flex flex-1 items-center gap-6 md:gap-8">
+    <header className="sticky top-0 z-50 border-b border-black/5 bg-cream/95 backdrop-blur-sm">
+      <div className="mx-auto grid h-14 max-w-7xl grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-x-2 px-3 sm:h-16 sm:gap-x-6 sm:px-6 md:px-10">
+        <nav
+          className="flex min-w-0 items-center gap-2.5 sm:gap-6 md:gap-8"
+          aria-label="Primary"
+        >
           {NAV.map((item) => (
             <Link
               key={item.label}
               href={item.href}
               onClick={(e) => scrollOrNavigate(e, item.href)}
-              className="font-sans text-xs tracking-wide text-charcoal hover:underline underline-offset-4"
+              className="whitespace-nowrap font-sans text-[11px] tracking-wide text-charcoal hover:underline underline-offset-4 sm:text-xs"
             >
               {item.label}
             </Link>
@@ -55,16 +58,16 @@ export default function Header() {
 
         <Link
           href="/"
-          className="font-serif text-xl md:text-2xl tracking-tight text-charcoal"
+          className="justify-self-center whitespace-nowrap px-1 font-serif text-lg tracking-tight text-charcoal sm:px-2 sm:text-xl md:text-2xl"
         >
           dee cast
         </Link>
 
-        <div className="flex flex-1 justify-end">
+        <div className="flex min-w-0 items-center justify-end">
           <button
             type="button"
             onClick={openCart}
-            className="inline-flex items-center gap-2 font-sans text-xs tracking-wide text-charcoal hover:opacity-70"
+            className="inline-flex items-center gap-1.5 whitespace-nowrap font-sans text-[11px] tracking-wide text-charcoal hover:opacity-70 sm:gap-2 sm:text-xs"
             aria-label="Open cart"
           >
             <svg
@@ -75,6 +78,7 @@ export default function Header() {
               stroke="currentColor"
               strokeWidth="1.5"
               aria-hidden
+              className="shrink-0"
             >
               <path d="M6 7h12l-1 13H7L6 7z" />
               <path d="M9 7V5a3 3 0 0 1 6 0v2" />

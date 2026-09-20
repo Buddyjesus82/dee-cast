@@ -39,7 +39,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-cream/95 backdrop-blur-sm">
-      <div className="mx-auto grid h-14 max-w-7xl grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-x-2 px-3 sm:h-16 sm:gap-x-6 sm:px-6 md:px-10">
+      <div className="mx-auto grid h-16 max-w-7xl grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-x-2 px-3 sm:h-[4.75rem] sm:gap-x-6 sm:px-6 md:h-20 md:px-10">
         <nav
           className="flex min-w-0 items-center gap-2.5 sm:gap-6 md:gap-8"
           aria-label="Primary"
@@ -58,7 +58,7 @@ export default function Header() {
 
         <Link
           href="/"
-          className="justify-self-center whitespace-nowrap px-1 font-serif text-xl font-medium italic leading-none tracking-tight text-charcoal sm:px-2 sm:text-2xl md:text-[1.85rem]"
+          className="justify-self-center whitespace-nowrap px-0.5 font-serif text-[1.7rem] font-medium italic leading-none tracking-tight text-charcoal sm:px-2 sm:text-4xl md:text-5xl"
         >
           dee <span className="text-pink">cast</span>
         </Link>

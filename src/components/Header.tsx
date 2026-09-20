@@ -39,9 +39,9 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-cream/95 backdrop-blur-sm">
-      <div className="mx-auto grid h-14 max-w-7xl grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-x-3 px-4 sm:h-16 sm:gap-x-6 sm:px-6 md:px-10">
+      <div className="mx-auto grid h-14 max-w-7xl grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-x-2 px-3 sm:h-16 sm:gap-x-6 sm:px-6 md:px-10">
         <nav
-          className="flex min-w-0 items-center gap-3.5 sm:gap-6 md:gap-8"
+          className="flex min-w-0 items-center gap-2.5 sm:gap-6 md:gap-8"
           aria-label="Primary"
         >
           {NAV.map((item) => (
@@ -49,7 +49,7 @@ export default function Header() {
               key={item.label}
               href={item.href}
               onClick={(e) => scrollOrNavigate(e, item.href)}
-              className="whitespace-nowrap font-sans text-[11px] tracking-[0.12em] text-charcoal hover:underline underline-offset-4 sm:text-xs sm:tracking-wide"
+              className="whitespace-nowrap font-sans text-[11px] tracking-wide text-charcoal hover:underline underline-offset-4 sm:text-xs"
             >
               {item.label}
             </Link>
@@ -58,7 +58,7 @@ export default function Header() {
 
         <Link
           href="/"
-          className="justify-self-center whitespace-nowrap px-1 font-serif text-xl tracking-tight text-charcoal sm:px-2 md:text-2xl"
+          className="justify-self-center whitespace-nowrap px-1 font-serif text-lg tracking-tight text-charcoal sm:px-2 sm:text-xl md:text-2xl"
         >
           dee cast
         </Link>
@@ -67,7 +67,7 @@ export default function Header() {
           <button
             type="button"
             onClick={openCart}
-            className="inline-flex items-center gap-1.5 whitespace-nowrap font-sans text-[11px] tracking-[0.12em] text-charcoal hover:opacity-70 sm:gap-2 sm:text-xs sm:tracking-wide"
+            className="inline-flex items-center gap-1.5 whitespace-nowrap font-sans text-[11px] tracking-wide text-charcoal hover:opacity-70 sm:gap-2 sm:text-xs"
             aria-label="Open cart"
           >
             <svg
